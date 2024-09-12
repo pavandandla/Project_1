@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Data</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px; /* Increased border-radius for a smoother look */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better contrast */
+            max-width: 400px;
+            max-height: 600px;
+            margin: 100px auto;
+        }
+        table {
+            text-align: center;
+
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0072ff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .buttons a:hover {
+            background-color: #0056b3;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Candidate Table Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                 <!-- Adjust column name as per your Candidate table structure -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for candidate in candidates %}
+            <tr>
+                <td>{{ candidate.id }}</td>
+                <td>{{ candidate.name }}</td>
+                <td>{{ candidate.email }}</td>
+                <!-- Adjust column names accordingly -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a class="buttons" style="background-color: #9999ff" ; href="{{ url_for('register') }}">Back to Register</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+    input[type=text], input[type=email] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #b0bec5; /* Lighter border color */
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: white; /* Soft background color for input fields */
+            }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        }
+
+    .registration-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px; /* Increased border-radius for a smoother look */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better contrast */
+            max-width: 400px;
+            margin: 100px auto;
+        }
+
+    button {
+            background-color: #00796b; /* Changed button color */
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+    button button:hover {
+        background-color: #004d40; /* Darker shade for hover effect */
+        }
+
+    .buttons {
+            margin-top: 20px;
+        }
+    .buttons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0072ff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+    .buttons a:hover {
+            background-color: #0056b3;
+        }
+    .buttons a.register {
+            background-color: #28a745;
+        }
+    .buttons a.register:hover {
+            background-color: #218838;
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Register</h1>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Full Name" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <button type="submit">Register</button><br>
+        </form><br>
+        <div class="buttons">
+            <a style="background-color: #99ff99" href="{{ url_for('home') }}">Back to Home</a>
+            <a style="background-color: #9999ff" href="{{ url_for('data') }}">See Data</a>
+        </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        }
+
+    .container {
+        text-align: center;
+        width: 50%;
+        height: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    h1 {
+        text-align: center;
+        color:rgb(0, 89, 255);
+    }
+    .buttons {
+                margin-top: 20px;
+                background-color: #99ff99;
+            }
+    .buttons a {
+                text-decoration: none;
+                color: #fff;
+                background-color: #0072ff;
+                padding: 15px 30px;
+                border-radius: 5px;
+                font-size: 1.2em;
+                margin: 10px;
+                transition: background-color 0.3s ease;
+            }
+    .buttons a:hover {
+                background-color: #0056b3;
+            }
+    .buttons a.register {
+                background-color: #28a745;
+            }
+    .buttons a.register:hover {
+                background-color: #218838;
+            }
+   </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Welcome to the Registration</h1><br>
+    <a class="buttons" href="{{ url_for('register') }}">Register</a>
+    </div>
+</body>
+</html>
